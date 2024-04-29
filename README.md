@@ -1,16 +1,43 @@
-# contract_wise
 
-A new Flutter project.
+# Flutter Boilerplate
+## A boilerplate template for Flutter projects to kickstart your development process.
 
-## Getting Started
+**Features**
+**Ready-to-Use** Structure: Start your Flutter project with a well-organized folder structure.
 
-This project is a starting point for a Flutter application.
+**State Management Integration:** Easily integrate your preferred state management solution.
 
-A few resources to get you started if this is your first Flutter project:
+**Theming Support:** Built-in support for theming to ensure consistent design across your app.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Dependency Injection Setup:** Simplified setup for dependency injection to manage your app's dependencies efficiently.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Code Generation:** Integrated code generation tools for efficient development.
+
+
+**Getting Started**
+
+Clone the repository:
+
+```
+git clone https://github.com/your-username/flutter-boilerplate.git
+```
+
+
+
+Navigate to the project directory:
+
+```
+cd flutter-boilerplate
+```
+
+
+
+Install dependencies:
+
+```
+flutter pub get
+```
+
+
+
+Start coding!
