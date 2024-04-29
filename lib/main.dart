@@ -1,7 +1,7 @@
-import 'package:contract_wise/common/colors/app_colors.dart';
-import 'package:contract_wise/features/onboarding/screen/onboarding_screen.dart';
-import 'package:contract_wise/features/splash/splash_screen.dart';
-import 'package:contract_wise/routes/app_routes.dart';
+import 'package:ladakh_tour/common/colors/app_colors.dart';
+import 'package:ladakh_tour/features/onboarding/screen/onboarding_screen.dart';
+import 'package:ladakh_tour/features/splash/splash_screen.dart';
+import 'package:ladakh_tour/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

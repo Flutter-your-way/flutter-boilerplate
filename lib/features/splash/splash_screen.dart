@@ -1,5 +1,7 @@
-import 'package:contract_wise/common/images/app_images.dart';
-import 'package:contract_wise/routes/app_routes.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:ladakh_tour/common/colors/app_colors.dart';
+import 'package:ladakh_tour/common/images/app_images.dart';
+import 'package:ladakh_tour/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,6 +13,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   void process() async {
+    await Future.delayed(const Duration(seconds: 3));
     Navigator.pushNamedAndRemoveUntil(
       context,
       AppRoutes.onboarding,
@@ -29,12 +32,28 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox.fromSize(
-        size: MediaQuery.sizeOf(context),
-        child: Image.asset(
-          AppImages.logo,
-          fit: BoxFit.cover,
-        ),
+      backgroundColor: AppColors.primaryGreen,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.asset(
+            AppImages.main_logo,
+            fit: BoxFit.contain,
+          ),
+          SizedBox(
+            height: 32,
+          ),
+          Text(
+            'Ladakh Tempo Association',
+            style: GoogleFonts.urbanist(
+              fontSize: 40,
+              color: AppColors.white,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
     );
   }
