@@ -3,9 +3,8 @@ import 'dart:ui';
 //dummy colors change according to your design
 
 class AppColors {
-  static Color black = const Color(0xFF212121);
-  static Color grey = const Color(0xFF616161);
-  static Color primaryGreen = const Color(0xFF0CC25F);
-  static Color lightGreen = const Color(0xFFECFAF2);
-  static Color white = const Color(0xFFFFFFFF);
+  static Color blackBackground = const Color(0xFF1B1D1F);
+  static Color whiteBackground = const Color(0xFFFFFFFF);
+  static Color primaryColor = const Color(0xFF1A1C1E);
+  static Color captionText = const Color(0xFF6C7278);
 }

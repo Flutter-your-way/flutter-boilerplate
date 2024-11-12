@@ -1,8 +1,9 @@
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ladakh_tour/common/colors/app_colors.dart';
 import 'package:ladakh_tour/common/images/app_images.dart';
-import 'package:ladakh_tour/routes/app_routes.dart';
-import 'package:flutter/material.dart';
+import 'package:ladakh_tour/features/onboarding/screen/onboarding_screen2.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,48 +13,39 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  void process() async {
+  func() async {
     await Future.delayed(const Duration(seconds: 3));
-    Navigator.pushNamedAndRemoveUntil(
-      context,
-      AppRoutes.onboarding,
-      (_) => false,
-    );
+    if (mounted) {
+      Navigator.pushReplacement(
+        context,
+        CupertinoPageRoute(
+          builder: (_) => const OnboardingScreenTwo(),
+        ),
+      );
+    }
   }
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      process();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      func();
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryGreen,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset(
-            AppImages.main_logo,
-            fit: BoxFit.contain,
-          ),
-          SizedBox(
-            height: 32,
-          ),
-          Text(
-            'Ladakh Tempo Association',
-            style: GoogleFonts.urbanist(
-              fontSize: 40,
-              color: AppColors.white,
-              fontWeight: FontWeight.bold,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
+      appBar: AppBar(
+        toolbarHeight: 0,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
+      ),
+      backgroundColor: AppColors.blackBackground,
+      body: Center(
+        child: Image.asset(
+          AppImages.splashLogo,
+          width: MediaQuery.sizeOf(context).width,
+        ),
       ),
     );
   }
