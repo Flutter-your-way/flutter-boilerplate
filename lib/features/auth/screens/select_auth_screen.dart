@@ -19,32 +19,16 @@ class _SelectAuthScreenState extends State<SelectAuthScreen> {
     return Scaffold(
       body: Column(
         children: [
+          //Your here here
           SizedBox(
-            width: 375.w,
-            height: 362.h,
-            child: Stack(
-              children: [
-                Positioned(
-                  top: 362.h - 486.h,
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: Image.asset(
-                    AppImages.ovalBg,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Positioned(
-                  bottom: 48,
-                  left: 0,
-                  right: 0,
-                  child: Image.asset(
-                    AppImages.onbCar,
-                  ),
-                ),
-              ],
+            width: 300.w,
+            height: 300.h,
+            child: Image.asset(
+              AppImages.splashLogo,
+              fit: BoxFit.cover,
             ),
           ),
+          Text("Your Logo Here"),
           SizedBox(height: 44.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 25.w),

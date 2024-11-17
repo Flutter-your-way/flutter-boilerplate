@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ladakh_tour/common/button/app_button.dart';
 import 'package:ladakh_tour/common/colors/app_colors.dart';
 import 'package:ladakh_tour/common/images/app_images.dart';
+import 'package:ladakh_tour/features/auth/screens/select_auth_screen.dart';
 
 class OnboardingScreenTwo extends StatefulWidget {
   const OnboardingScreenTwo({super.key});
@@ -163,12 +164,12 @@ class _OnboardingScreenTwoState extends State<OnboardingScreenTwo> {
             secondChild: AppButton.fromText(
               text: "Get Started",
               onTap: () {
-                // Navigator.pushReplacement(
-                //   context,
-                //   CupertinoPageRoute(
-                //     builder: (context) => const SelectAuthScreen(),
-                //   ),
-                // );
+                Navigator.pushReplacement(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const SelectAuthScreen(),
+                  ),
+                );
               },
             ),
             crossFadeState: cPage == 2
